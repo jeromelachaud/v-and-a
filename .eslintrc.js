@@ -15,11 +15,10 @@ module.exports = {
   },
   // custom rules
   'rules': {
+    'semi': ['error', 'always'],
     'brace-style': 0,
     'generator-star-spacing': 0,
-    'comma-style': [ 'error', 'last' ],
     'comma-dangle': [ 'error', 'always-multiline' ],
-    'array-bracket-spacing': [ 'error', 'always' ],
     'semi-spacing': [ 'error', { before: false, after: true } ],
     'no-empty': [ 'error', { 'allowEmptyCatch': true } ],
     'quote-props': [ 'error', 'as-needed' ],
