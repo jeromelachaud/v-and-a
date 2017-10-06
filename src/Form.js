@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Service } from './Service'
 import './Form.css'
 
 export default class SearchForm extends Component {
@@ -11,6 +12,7 @@ export default class SearchForm extends Component {
     }
 
     this.onChangeQuery = this.onChangeQuery.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
   }
 
   onChangeQuery(event) {
@@ -19,8 +21,19 @@ export default class SearchForm extends Component {
     })
   }
 
+  onSubmit(e) {
+    e.preventDefault()
+    Service.fetch({
+      query: this.state.query,
+    })
+      .then(res => {
+        this.setState({
+          results: res.records,
+        })
+      })
+  }
+
   render() {
-    debugger
     return (
       <div>
         <form
