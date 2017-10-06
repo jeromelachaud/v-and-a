@@ -15,7 +15,7 @@ module.exports = {
   },
   // custom rules
   'rules': {
-    'semi': ['error', 'always'],
+    'semi': ['error', 'never'],
     'brace-style': 0,
     'generator-star-spacing': 0,
     'comma-dangle': [ 'error', 'always-multiline' ],
