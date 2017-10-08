@@ -1,0 +1,21 @@
+/*reset button */
+button {
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button; /* for input */
+}
+.search-form-button {
+  width: 100%;
+  line-height: 40px;
+  color: white;
+  background-color: #402d2d;
+}
+
+.search-form-button:hover {
+  background-color: #081c24;
+}

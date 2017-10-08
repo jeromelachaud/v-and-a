@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
+import { Label } from './Label'
+import { Input } from './Input'
+import { Button } from './Button'
 import { Service } from './Service'
 import './Form.css'
 
-export default class SearchForm extends Component {
+export default class Form extends Component {
 
   constructor(props) {
     super(props)
@@ -35,35 +38,13 @@ export default class SearchForm extends Component {
 
   render() {
     return (
-      <div>
-        <form
-          onSubmit={this.onSubmit}>
-          <div
-            className="search-form">
-            <label
-              className="search-form-label"
-              htmlFor="VandASearch">
-              Search in the Victoria & Albert Museum
-            </label>
-            <input
-              aria-label="Search in the Victoria & Albert Museum"
-              className="search-form-input-field"
-              id="searchFormInPutField"
-              onChange={this.onChangeQuery}
-              placeholder="Search in the Victoria & Albert Museum"
-              required
-              size="80"
-              type="search">
-            </input>
-            <button
-              className="search-form-button"
-              id="searchFormButton"
-              type="submit">
-              Search!
-            </button>
-          </div>
-        </form>
-      </div>
+      <form
+        onSubmit={this.onSubmit}>
+        <Label />
+        <Input
+          onChange={this.onChangeQuery}/>
+        <Button />
+      </form>
     )
   }
 
