@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { Label } from './Label'
 import { Input } from './Input'
 import { Button } from './Button'
-import { Service } from './Service'
+import Results from './Results'
+import { Service } from '../Service'
 import './Form.css'
 
 export default class Form extends Component {
@@ -43,7 +44,9 @@ export default class Form extends Component {
         <Label />
         <Input
           onChange={this.onChangeQuery}/>
-        <Button />
+        <Button/>
+        <Results
+          results={this.state.results}/>
       </form>
     )
   }

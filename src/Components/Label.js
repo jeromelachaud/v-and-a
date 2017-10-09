@@ -1,7 +1,7 @@
 import React from 'react'
 import './Label.css'
 
-export const Label = props => (
+export const Label = () => (
 
   <label
     className="search-form-label"
