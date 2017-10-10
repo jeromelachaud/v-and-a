@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Label } from './Label'
-import { Input } from './Input'
+import { SearchInputField } from './SearchInputField'
 import { Button } from './Button'
 import Results from './Results'
 import { Service } from '../Service'
@@ -41,10 +40,8 @@ export default class Form extends Component {
     return (
       <form
         onSubmit={this.onSubmit}>
-        <Label
-          htmlFor="searchFormInPutField"
-          text="Search in the Victoria & Albert Museum"/>
-        <Input
+        <SearchInputField
+          type="Search"
           onChange={this.onChangeQuery}/>
         <Button/>
         <Results
