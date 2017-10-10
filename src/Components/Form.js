@@ -41,7 +41,9 @@ export default class Form extends Component {
     return (
       <form
         onSubmit={this.onSubmit}>
-        <Label />
+        <Label
+          htmlFor="searchFormInPutField"
+          text="Search in the Victoria & Albert Museum"/>
         <Input
           onChange={this.onChangeQuery}/>
         <Button/>
