@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #081c24;
+  --secondary-color: #402d2d;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -13,6 +18,7 @@ body {
 }
 
 label, input, button {
+  color: var(--primary-color);
   font-size: 1rem;
   margin: 0 0 .75rem 0;
 }

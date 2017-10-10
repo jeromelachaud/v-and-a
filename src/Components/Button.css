@@ -12,9 +12,9 @@ button {
   width: 100%;
   line-height: 40px;
   color: white;
-  background-color: #402d2d;
+  background-color: var(--primary-color);
 }
 
 .search-form-button:hover {
-  background-color: #081c24;
+  background-color: var(--secondary-color);
 }
