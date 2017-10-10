@@ -1,3 +1,5 @@
 .images-option-label {
   margin: 0 .75rem 0 0;
+  cursor: pointer;
+  user-select: none;
 }
