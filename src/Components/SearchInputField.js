@@ -6,7 +6,6 @@ import './Input.css'
 export const SearchInputField = props => (
   <div>
     <Label
-      className="search-form-label"
       htmlFor="searchFormInPutField"
       text="Search in the Victoria & Albert Museum"/>
 

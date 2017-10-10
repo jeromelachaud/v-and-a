@@ -3,7 +3,6 @@ import { SearchInputField } from './SearchInputField'
 import { Button } from './Button'
 import Results from './Results'
 import { Service } from '../Service'
-import './Form.css'
 
 export default class Form extends Component {
 
