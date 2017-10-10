@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { SearchInputField } from './SearchInputField'
+import ImagesOption from './ImagesOption'
 import { Button } from './Button'
 import Results from './Results'
 import { Service } from '../Service'
@@ -42,6 +43,7 @@ export default class Form extends Component {
         <SearchInputField
           type="Search"
           onChange={this.onChangeQuery}/>
+        <ImagesOption />
         <Button/>
         <Results
           results={this.state.results}/>
