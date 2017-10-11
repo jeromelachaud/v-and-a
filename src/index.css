@@ -22,7 +22,3 @@ label, input, button {
   font-size: 1rem;
   margin: 0 0 .75rem 0;
 }
-
-label {
-  display: inline-block;
-}
