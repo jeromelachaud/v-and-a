@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { SearchInputField } from './SearchInputField'
 import ImagesOption from './ImagesOption'
+import {DomainsOption} from './DomainsOption'
 import { Button } from './Button'
 import Results from './Results'
 import { Service } from '../Service'
@@ -42,6 +43,7 @@ export default class Form extends Component {
         onSubmit={this.onSubmit}>
         <SearchInputField
           onChange={this.onChangeQuery}/>
+        <DomainsOption />
         <ImagesOption />
         <Button/>
         <Results

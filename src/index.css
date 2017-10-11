@@ -17,7 +17,7 @@ body {
   font-family: sans-serif;
 }
 
-label, input, button {
+label, input, button, select {
   color: var(--primary-color);
   font-size: 1rem;
   margin: 0 0 .75rem 0;
