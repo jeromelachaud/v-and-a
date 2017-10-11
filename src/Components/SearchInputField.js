@@ -25,5 +25,4 @@ export const SearchInputField = props => (
 
 SearchInputField.propTypes = {
   onChange: PropTypes.func,
-  type: PropTypes.string.isRequired,
 }

@@ -41,7 +41,6 @@ export default class Form extends Component {
       <form
         onSubmit={this.onSubmit}>
         <SearchInputField
-          type="Search"
           onChange={this.onChangeQuery}/>
         <ImagesOption />
         <Button/>
