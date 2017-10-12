@@ -52,6 +52,7 @@ export default class Form extends Component {
         <SearchInputField
           onChange={this.onChangeQuery}/>
         <ImagesOption
+          checked={this.state.imagesOption}
           onChange={this.onChangeOption}/>
         <Button/>
         <Results
