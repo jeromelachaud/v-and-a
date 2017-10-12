@@ -14,11 +14,13 @@ export default class Form extends Component {
       results: [],
       query: '',
       imagesOption: true,
+      domainsOption: 'objectnamesearch',
     }
 
     this.onChangeQuery = this.onChangeQuery.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
     this.onChangeImagesOption = this.onChangeImagesOption.bind(this)
+    this.onChangeDomainsOption = this.onChangeDomainsOption.bind(this)
   }
 
   onChangeQuery(event) {
@@ -33,11 +35,18 @@ export default class Form extends Component {
     })
   }
 
+  onChangeDomainsOption(event) {
+    this.setState({
+      domainsOption: event.target.value,
+    })
+  }
+
   onSubmit(e) {
     e.preventDefault()
     Service.fetch({
       query: this.state.query,
       imagesOption: this.state.imagesOption,
+      domainsOption: this.state.domainsOption,
     })
       .then(res => {
         this.setState({
@@ -52,7 +61,9 @@ export default class Form extends Component {
         onSubmit={this.onSubmit}>
         <SearchInputField
           onChange={this.onChangeQuery}/>
-        <DomainsOption />
+        <DomainsOption
+          defaultValue={this.state.domainsOption}
+          onChange={this.onChangeDomainsOption}/>
         <ImagesOption
           checked={this.state.imagesOption}
           onChange={this.onChangeImagesOption}/>
