@@ -18,7 +18,7 @@ export default class Form extends Component {
 
     this.onChangeQuery = this.onChangeQuery.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
-    this.onChangeOption = this.onChangeOption.bind(this)
+    this.onChangeImagesOption = this.onChangeImagesOption.bind(this)
   }
 
   onChangeQuery(event) {
@@ -27,7 +27,7 @@ export default class Form extends Component {
     })
   }
 
-  onChangeOption(event) {
+  onChangeImagesOption(event) {
     this.setState({
       imagesOption: event.target.checked,
     })
@@ -55,7 +55,7 @@ export default class Form extends Component {
         <DomainsOption />
         <ImagesOption
           checked={this.state.imagesOption}
-          onChange={this.onChangeOption}/>
+          onChange={this.onChangeImagesOption}/>
         <Button/>
         <Results
           results={this.state.results}/>
