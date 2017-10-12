@@ -20,7 +20,7 @@ export const DomainsOption = props => {
       <Label
         className="domains-option-label"
         htmlFor="domainsOption"
-        text='Choose the search domain' />
+        text='Search domain' />
       <select
         required
         defaultValue={props.value}
