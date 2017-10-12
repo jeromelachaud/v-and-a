@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Label } from './Label'
 
-class ImagesOption extends Component {
+export const ImagesOption = props => {
 
-  render() {
     return (
       <div>
         <Label
@@ -15,14 +14,12 @@ class ImagesOption extends Component {
         <input
           id="imagesOption"
           type="checkbox"
-          onChange={this.props.onChange}/>
+        onChange={props.onChange}/>
       </div>
     )
-  }
 
 }
 
-export default ImagesOption
 ImagesOption.propTypes = {
   onChange: PropTypes.func,
 }
