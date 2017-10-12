@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import { Label } from './Label'
 
 export const ImagesOption = props => {
