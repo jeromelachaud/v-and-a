@@ -5,6 +5,7 @@ import { DomainsOption } from './DomainsOption'
 import { Button } from './Button'
 import Results from './Results'
 import { Service } from '../Service'
+import './Form.css'
 
 export default class Form extends Component {
 
@@ -61,12 +62,15 @@ export default class Form extends Component {
         onSubmit={this.onSubmit}>
         <SearchInputField
           onChange={this.onChangeQuery}/>
-        <DomainsOption
-          defaultValue={this.state.domainsOption}
-          onChange={this.onChangeDomainsOption}/>
-        <ImagesOption
-          checked={this.state.imagesOption}
-          onChange={this.onChangeImagesOption}/>
+        <div
+          className="OptionsWrapper">
+          <DomainsOption
+            defaultValue={this.state.domainsOption}
+            onChange={this.onChangeDomainsOption}/>
+          <ImagesOption
+            checked={this.state.imagesOption}
+            onChange={this.onChangeImagesOption}/>
+        </div>
         <Button/>
         <Results
           results={this.state.results}/>

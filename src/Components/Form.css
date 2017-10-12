@@ -1,0 +1,11 @@
+.OptionsWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+@media(max-width: 768px) {
+  .OptionsWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
