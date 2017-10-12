@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import trimImageId from '../helpers/trim-image-id'
+import './Image.css'
 
 const imagesBaseUrl = 'http://media.vam.ac.uk/media/thira/collection_images/'
 
