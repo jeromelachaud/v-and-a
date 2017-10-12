@@ -22,6 +22,8 @@ export const DomainsOption = props => {
         htmlFor="domainsOption"
         text='Choose the search domain' />
       <select
+        required
+        defaultValue={props.value}
         id="domainsOption"
         className="domains-option-select"
         onChange={props.onChange}>
@@ -34,4 +36,5 @@ export const DomainsOption = props => {
 DomainsOption.propTypes = {
   // Change it to required
   onChange: PropTypes.func,
+  value: PropTypes.string,
 }
