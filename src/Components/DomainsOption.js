@@ -14,10 +14,7 @@ export const DomainsOption = props => {
       <select
         id="domainsOption"
         onChange={props.onChange} >
-        <option value="grapefruit">Grapefruit</option>
-        <option value="lime">Lime</option>
-        <option value="coconut">Coconut</option>
-        <option value="mango">Mango</option>
+        <option value=""></option>
       </select>
     </div>
   )
