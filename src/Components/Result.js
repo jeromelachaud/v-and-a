@@ -7,8 +7,34 @@ export default class Result extends Component {
 
   render() {
     const {
-      results,
+      results: {
+        title,
+        artist,
+        date_text,
+        location,
+        object,
+        primary_image_id: primaryImageId,
+      },
     } = this.props
+
+    const displayedProps = Object.assign({}, {
+      title,
+      artist,
+      date_text,
+      location,
+      object,
+    })
+
+    const titleElement = Object.keys(displayedProps).map(key => {
+      if (displayedProps[key] !== '') {
+        return (
+          <p
+            key={key}>
+            {key}: {displayedProps[key]}
+          </p>
+        )
+      }
+    })
 
     return (
       <div
@@ -16,12 +42,11 @@ export default class Result extends Component {
         <figure
           className="result__figure">
           <Image
-            imageId={results.primary_image_id}/>
+            imageId={primaryImageId}/>
         </figure>
         <div
           className="result__content">
-          <div>
-          </div>
+          {titleElement}
         </div>
       </div>
     )
