@@ -1,0 +1,12 @@
+.search-input-field {
+  border:1px solid lightgrey;
+  -webkit-appearance:textfield;
+  width: 100%;
+  padding: 0 8px 0;
+  line-height: 40px;
+  outline: none;
+}
+
+.search-input-field:focus {
+  border-color: grey;
+}
