@@ -13,7 +13,7 @@ export const ImagesOption = props => {
         id="imagesOption"
         type="checkbox"
         checked={props.checked}
-        onChange={props.onChange}/>
+        onChange={props.onChange} />
     </div>
   )
 }

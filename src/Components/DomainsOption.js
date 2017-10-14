@@ -8,7 +8,9 @@ export const DomainsOption = props => {
 
   const optionElement = domainsOption.map((option, i) => {
     return (
-      <option value={option.value} key={i}>
+      <option
+        key={i}
+        value={option.value}>
         {option.text}
       </option>
     )
@@ -23,9 +25,9 @@ export const DomainsOption = props => {
         text='Search domain' />
       <select
         required
-        defaultValue={props.value}
         id="domainsOption"
         className="domains-option-select"
+        defaultValue={props.value}
         onChange={props.onChange}>
         {optionElement}
       </select>

@@ -10,14 +10,14 @@ export const SearchInputField = props => (
       text="Search in the Victoria & Albert Museum"/>
 
     <input
-      aria-label="Search in the Victoria & Albert Museum"
-      className="search-form-input-field"
-      id="searchFormInPutField"
-      onChange={props.onChange}
-      placeholder="Search in the Victoria & Albert Museum"
       required
       size="80"
-      type="search">
+      type="search"
+      aria-label="Search in the Victoria & Albert Museum"
+      id="searchFormInPutField"
+      className="search-form-input-field"
+      placeholder="Search in the Victoria & Albert Museum"
+      onChange={props.onChange}>
     </input>
   </div>
 
