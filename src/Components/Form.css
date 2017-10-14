@@ -1,3 +1,9 @@
+label, input, button, select {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin: 0 .5rem .75rem 0;
+}
+
 .OptionsWrapper {
   display: flex;
   flex-direction: row;
