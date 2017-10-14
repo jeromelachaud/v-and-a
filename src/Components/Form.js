@@ -3,6 +3,7 @@ import { SearchInputField } from './SearchInputField'
 import { ImagesOption } from './ImagesOption'
 import { DomainsOption } from './DomainsOption'
 import { Button } from './Button'
+import { Loader } from './Loader'
 import Results from './Results'
 import { Service } from '../Service'
 import './Form.css'
@@ -12,6 +13,7 @@ export default class Form extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      isLoading: false,
       results: [],
       query: '',
       imagesOption: true,
@@ -44,6 +46,9 @@ export default class Form extends Component {
 
   onSubmit(e) {
     e.preventDefault()
+    this.setState({
+      isLoading: true,
+    })
     Service.fetch({
       query: this.state.query,
       imagesOption: this.state.imagesOption,
@@ -51,12 +56,24 @@ export default class Form extends Component {
     })
       .then(res => {
         this.setState({
+          isLoading: false,
           results: res.records,
         })
       })
   }
 
   render() {
+
+    let resultsElement
+    if (this.state.isLoading) {
+      resultsElement = (<Loader />)
+    } else {
+      resultsElement = (
+        <Results
+          results={this.state.results}/>
+      )
+    }
+
     return (
       <form
         onSubmit={this.onSubmit}>
@@ -72,8 +89,7 @@ export default class Form extends Component {
             onChange={this.onChangeImagesOption}/>
         </div>
         <Button/>
-        <Results
-          results={this.state.results}/>
+        {resultsElement}
       </form>
     )
   }
