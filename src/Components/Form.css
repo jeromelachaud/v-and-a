@@ -6,12 +6,13 @@ label, input, button, select {
 
 .OptionsWrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-@media(max-width: 768px) {
+@media(min-width: 768px) {
   .OptionsWrapper {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
