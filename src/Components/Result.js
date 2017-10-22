@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Image } from './Image'
+import replaceUnderscoreWithSpace from '../helpers/replace-underscore-with-space'
 import './Result.css'
 
 export default class Result extends Component {
@@ -31,7 +32,8 @@ export default class Result extends Component {
           <p
             key={key}>
             <span
-              style={{textTransform: 'capitalize'}}>{key}</span>: {displayedProps[key]}
+              style={{textTransform: 'capitalize'}}>
+              {replaceUnderscoreWithSpace(key)}</span>: {displayedProps[key]}
           </p>
         )
       }
