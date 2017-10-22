@@ -27,7 +27,7 @@ export default class Result extends Component {
     })
 
     const titleElement = Object.keys(displayedProps).map(key => {
-      if (displayedProps[key] !== '') {
+      if (displayedProps[key] !== '' && displayedProps[key] !== undefined) {
         return (
           <p
             key={key}>
