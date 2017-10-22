@@ -30,7 +30,8 @@ export default class Result extends Component {
         return (
           <p
             key={key}>
-            {key}: {displayedProps[key]}
+            <span
+              style={{textTransform: 'capitalize'}}>{key}</span>: {displayedProps[key]}
           </p>
         )
       }
