@@ -33,7 +33,8 @@ export default class Result extends Component {
             key={key}>
             <span
               style={{textTransform: 'capitalize'}}>
-              {replaceUnderscoreWithSpace(key)}</span>: {displayedProps[key]}
+              {replaceUnderscoreWithSpace(key)}
+            </span>: {displayedProps[key]}
           </p>
         )
       }
